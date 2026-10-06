@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: webpage
 spec:
+  replicaas: 2
   selector:
     matchLabels:
       app: webpage
@@ -11,7 +12,6 @@ spec:
       labels:
         app: webpage
     spec:
-      replicas: 2
       containers:
       - name: webpage
         image: gru.ocir.io/grglog7bpvjm/pagina-exemplo:blue
